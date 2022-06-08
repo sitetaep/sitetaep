@@ -14,13 +14,17 @@ module.exports = {
         'gatsby-plugin-postcss',
         'gatsby-plugin-image',
         'gatsby-plugin-sharp',
-        'gatsby-transformer-sharp',
-	'gatsby-plugin-google-analytics',
+        {
+      	    resolve: 'gatsby-transformer-sharp',
+            options: {
+        	checkSupportedExtensions: true,
+      	    },
+        },
         {
             resolve: 'gatsby-plugin-google-analytics',
             options: {
                 trackingId: 'UA-120800801-1'
-            }
+            },
         },
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-sitemap',
