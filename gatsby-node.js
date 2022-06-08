@@ -19,5 +19,4 @@ exports.createPages = async function ({ actions, graphql }) {
             context: { slug: slug }
         })
     })
-
 }

@@ -29,7 +29,5 @@ module.exports = {
         }
     },
     variants: {},
-    plugins: [
-        'gatsby-plugin-postcss',
-      ]
+    plugins: []
 }
