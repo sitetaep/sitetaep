@@ -32,24 +32,6 @@ const HeroSection = () => (
 
 const EquipeSection = ({
 }) => {
-
-    const query = `{
-        contentfulPole(name: {eq: "Presidence"}) {
-            administrateur {
-                image {
-                gatsbyImageData(
-                    width: 600
-                    placeholder: BLURRED
-                    formats: [AUTO, WEBP]
-                )
-                }
-                role
-                name
-                link
-            }
-        }
-    }`
-
     
     return (
 
