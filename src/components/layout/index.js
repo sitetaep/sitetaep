@@ -1,0 +1,5 @@
+export { default as Footer } from './Footer'
+export { default as Navbar } from './Navbar'
+export { default as CTAButtons } from './CTAButtons'
+export { default as SEO } from './SEO'
+export { default as Layout } from './Layout'
