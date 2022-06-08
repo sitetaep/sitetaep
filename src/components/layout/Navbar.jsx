@@ -68,6 +68,9 @@ export default function Navbar() {
                     />
                 </li>
                 <li>
+                    <Link to='/demo'>Comment ça marche?</Link>
+                </li>
+                <li>
                     <Link to='/ensta'>ENSTA Paris</Link>
                 </li>
                 <li>
