@@ -14,6 +14,26 @@ const AvantageSection = () => (
         <br/>
         <br/>
         <h2 className='text-center text-gray-400'>
+            Qu'est-ce que TAEP ?
+        </h2>
+        <br/>
+        <br/>
+        <br/>
+        <div class="flex flex-row">
+            <StaticImage
+                src='../images/taep.png'
+                alt='TAEP'
+                placeholder='blurred'
+                class="mx-10"
+            />
+            <p class="mx-10">
+                Techniques Avancées Etudes et Projets (TAEP) est la Junior-Entreprise d'ENSTA Paris : au sein d’une Junior-Entreprise, des étudiants motivés et dynamiques réalisent des missions pour des professionnels dans le but de mettre en application les enseignements théoriques dispensés dans leur école. Notre statut d’association étudiante de loi 1901 nous permet en outre de pratiquer des tarifs très intéressants pour nos missions.
+            </p>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <h2 className='text-center text-gray-400'>
             Pourquoi choisir la Junior-Entreprise TAEP?
         </h2>
         <br/>
