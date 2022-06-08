@@ -33,7 +33,7 @@ const DescriptionSection = () => (
         <br/>
         <div className='w-full text-center'>
             <StaticImage
-                src='../images/logo_ensta.png'
+                src='../images/logo_ENSTA.png'
                 alt='ENSTA Paris'
                 placeholder='blurred'
                 
