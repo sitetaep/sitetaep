@@ -15,6 +15,7 @@ module.exports = {
         'gatsby-plugin-image',
         'gatsby-plugin-sharp',
         'gatsby-transformer-sharp',
+	'gatsby-plugin-google-analytics',
         {
             resolve: 'gatsby-plugin-google-analytics',
             options: {
