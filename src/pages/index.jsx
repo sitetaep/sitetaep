@@ -17,9 +17,7 @@ const AvantageSection = () => (
             Qu'est-ce que TAEP ?
         </h2>
         <br/>
-        <br/>
-        <br/>
-        <div class="flex flex-row">
+        <div class="flex flex-col sm:flex-row">
             <StaticImage
                 src='../images/taep.png'
                 alt='TAEP'
@@ -59,7 +57,7 @@ const AvantageSection = () => (
                 title="Engagement et démarche RSE"
                 text="Les élèves d'ENSTA Paris sont formés aux enjeux climatiques.
                 Ils ont notamment pu participer à des fresques du climat et des conférences d'experts sur le sujet en plus des formations sur les cycles de vie et les bilans carbone que l'école dispense.
-                Les administrateurs de TAEP ont aussi décider de s'inscire dans la démarche RSE à plus grande échelle en participant à la COP RSE avec d'autre Junior-Entreprises."
+                Les administrateurs de TAEP ont aussi décidé de s'inscire dans la démarche RSE à plus grande échelle en participant à la COP RSE avec d'autres Junior-Entreprises."
             />
         </div>
     </section>

@@ -43,9 +43,9 @@ export default function ContactForm() {
                 </div>
             </div>
 
-            <div className='flex-1 text-black'>
+            <div className='flex-1 text-black scale-50'>
                 <h2 className='text-4xl font-bold mb-8'>À votre tour</h2>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeWbxjbnwMCEievSgnP3rosK6P-TlHxcvZb-EWN8eQBSbk_Mg/viewform?embedded=true" width="640" height="780" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeWbxjbnwMCEievSgnP3rosK6P-TlHxcvZb-EWN8eQBSbk_Mg/viewform?embedded=true" width="350" height="800" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
             </div>
         </section>
     )

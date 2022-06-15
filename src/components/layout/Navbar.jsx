@@ -74,7 +74,7 @@ export default function Navbar() {
                     <Link to='/ensta'>ENSTA Paris</Link>
                 </li>
                 <li>
-                    <Link to='/apropos'>A propos</Link>
+                    <Link to='/apropos'>Notre Equipe</Link>
                 </li>
                 {/* <li>
                     <Link to='/ecosysteme'>Ecosystème</Link>

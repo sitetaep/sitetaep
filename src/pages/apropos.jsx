@@ -42,6 +42,13 @@ const EquipeSection = ({
             Le Président est chargé de coordonner et de diriger l’ensemble des actions réalisées au cœur de la Junior-Entreprise. Il conduit la stratégie mais aussi les relations extérieures : c’est l’interlocuteur privilégié auprès de nos partenaires mais aussi auprès de la Confédération Nationale des Junior-Entreprises (CNJE).
             Le vice-président épaule le président dans l’ensemble de ces tâches et s’assure de la bonne gestion de l’équipe. Il est aussi responsable de la qualité. 
             </p>
+            <div className='text-center'>
+            {/*<AdministrateurCard
+                link="https://www.linkedin.com/in/alexis-rusalem-a93618173/"
+                name="Alexis Rusalem"
+                role="Président"
+            />*/}
+            </div>
             <h2>Pôle Trésorerie</h2>
             <p>
             Le pôle Trésorerie est responsable de la gestion financière et comptable de TAEP. Il gère le budget afin d’appliquer au mieux la stratégie de notre Junior-Entreprise. Il est également responsable des déclaratifs fiscaux et sociaux ainsi que de l’analyse financière.

@@ -1,18 +1,18 @@
 import * as React from 'react'
+import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
-export default function AdministrateurCard({ image, name, role, link }) {
-    const picture = getImage(image)
-
+export default function AdministrateurCard({ data, name, role, link }) {
+    const picture = getImage(data.contentfulAdministrateur.image)
     return (
         <div className='flex flex-col shadow-lg w-min place-self-start'>
             <div className='w-40 h-40'>
-                <GatsbyImage image={picture} title={name} alt={name} />
+            <GatsbyImage image={picture} title={name} alt={name} />
             </div>
 
             <div className='bg-white w-full flex flex-col space-y-2 p-4'>
                 <span className='font-light text-blue-1000'>{name}</span>
-                <span className='font-light text-blue-1000'>{role}</span>
+                <span className='font-bold text-blue-1000'>{role}</span>
                 <a
                     className='text-gray-400 hover:text-gray-600 font-light flex space-x-1'
                     href={link}
@@ -39,3 +39,13 @@ export default function AdministrateurCard({ image, name, role, link }) {
         </div>
     )
 }
+
+export const postQuery = graphql`
+query {
+    contentfulAdministrateur(name: {eq: "Alexis Rusalem"}) {
+        image {
+          gatsbyImageData(width: 600, placeholder: BLURRED, formats: [AUTO, WEBP])
+        }
+      }
+}
+`
