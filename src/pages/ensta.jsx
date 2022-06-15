@@ -3,13 +3,15 @@ import { Layout } from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 
 const HeroSection = () => (
-    <section className='text-center flex flex-col space-y-12 items-center px-4 py-12 sm:p-20 max-w-5xl mx-auto'>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+    <section className='text-center flex flex-col sm:space-y-12 items-center px-4 py-12 sm:p-20 max-w-5xl mx-auto'>
+        <div className='hidden md:block'>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+        </div>
         <h1 className='text-white'>
             L’Excellence Académique de l’ENSTA Paris à votre service!
         </h1>
