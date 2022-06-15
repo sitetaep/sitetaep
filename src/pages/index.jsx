@@ -64,20 +64,28 @@ const AvantageSection = () => (
 )
 
 const HeroSection = () => (
-    <section className='text-center flex flex-col space-y-12 items-center px-4 py-12 sm:p-20 max-w-5xl mx-auto'>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+    <section className='text-center flex flex-col sm:space-y-12 items-center px-4 py-12 sm:p-20 max-w-5xl mx-auto'>
+        <div className='hidden md:block'>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+        </div>
         <br/>
         <br/>
         <h1 className='text-white'>
             L’Excellence Académique de l’ENSTA Paris à votre service!
         </h1>
+        <div className='block sm:hidden'>
+            <br/>
+        </div>
         <p className='text-xl text-white'>
             Un réseau de +300 étudiants brillants et dynamiques pour vous
             accompagner dans tous vos projets en lien avec l'ingénierie.
         </p>
+        <div className='block sm:hidden'>
+            <br/>
+        </div>
         <Link to='/contact'>
             <button className='mt-8 px-8 py-4 rounded bg-yellow-300 text-blue-900'>
                 Présenter mon projet

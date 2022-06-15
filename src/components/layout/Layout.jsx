@@ -7,7 +7,7 @@ export default function Layout({ title, children }) {
         <>
             <SEO title={title} />
             <div 
-            class="w-full h-full sm:bg-no-repeat bg-contain sm:bg-cover bg-bottom bg-fixed "
+            class="w-full h-full bg-no-repeat bg-cover sm:bg-cover bg-center sm:bg-bottom bg-fixed"
             style={{ 
             backgroundImage: `url(${background})`
             }}>
