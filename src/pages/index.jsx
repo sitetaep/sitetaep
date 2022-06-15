@@ -71,8 +71,6 @@ const HeroSection = () => (
         <br/>
         <br/>
         <br/>
-        <br/>
-        <br/>
         <h1 className='text-white'>
             L’Excellence Académique de l’ENSTA Paris à votre service!
         </h1>
@@ -81,7 +79,7 @@ const HeroSection = () => (
             accompagner dans tous vos projets en lien avec l'ingénierie.
         </p>
         <Link to='/contact'>
-            <button className='mt-8 px-8 py-4 bg-yellow-300 text-blue-900'>
+            <button className='mt-8 px-8 py-4 rounded bg-yellow-300 text-blue-900'>
                 Présenter mon projet
             </button>
         </Link>

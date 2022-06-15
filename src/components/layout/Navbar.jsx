@@ -11,7 +11,9 @@ const Dropdown = ({ options, title }) => {
                 className='select-none relative'
                 onMouseEnter={() => setVisible(true)}
             >
+                <button class="bg-gray-100 hover:bg-gray-300 font-bold py-2 sm:px-4 rounded">
                 {title}
+                </button>
             </span>
 
             {visible && (
@@ -57,10 +59,10 @@ export default function Navbar() {
                     />
                 </Link>
             </div>
-            <ul className='px-12 flex flex-row space-x-6 uppercase text-black font-bold'>
+            <ul className='sm:px-12 flex flex-row space-x-3 uppercase text-black font-bold'>
                 <li>
                     <Dropdown
-                        title='Spécialités'
+                        title='Nos Spécialités'
                         options={pages.distinct.map((name) => ({
                             title: capitalize(name),
                             link: `/${name.toLowerCase()}`
@@ -68,13 +70,13 @@ export default function Navbar() {
                     />
                 </li>
                 <li>
-                    <Link to='/demo'>Comment ça marche?</Link>
+                    <Link to='/demo'><button class="bg-gray-100 hover:bg-gray-300 font-bold py-2 sm:px-4 rounded">Comment ça marche?</button></Link>
                 </li>
                 <li>
-                    <Link to='/ensta'>ENSTA Paris</Link>
-                </li>
+                    <Link to='/ensta'><button class="bg-gray-100 hover:bg-gray-300 font-bold py-2 sm:px-4 rounded">ENSTA Paris</button></Link>
+                    </li>
                 <li>
-                    <Link to='/apropos'>Notre Equipe</Link>
+                    <Link to='/apropos'><button class="bg-gray-100 hover:bg-gray-300 font-bold py-2 sm:px-4 rounded">Notre Equipe</button></Link>
                 </li>
                 {/* <li>
                     <Link to='/ecosysteme'>Ecosystème</Link>

@@ -13,7 +13,7 @@ const Button = ({ text, svg, onClick }) => {
             onMouseEnter={toggleReveal}
             onMouseLeave={toggleReveal}
             onClick={onClick}
-            className='p-4 bg-gray-100 rounded flex flex-row space-x-4'
+            className='p-4 hover:bg-gray-300 bg-gray-100 rounded flex flex-row space-x-4'
         >
             {isRevealed ? <span className=''>{text}</span> : null}
             <div>{svg}</div>
@@ -23,7 +23,7 @@ const Button = ({ text, svg, onClick }) => {
 
 export default function CTAButtons() {
     return (
-        <nav className='fixed z-10 right-8 bottom-0 sm:top-1/2 text-black p-4 flex flex-col items-end space-y-4'>
+        <nav className='fixed z-10 right-8 sm:right-0 bottom-0 sm:top-1/2 text-black p-4 flex flex-col items-end space-y-4'>
              <Button
                 svg={
                     <svg
