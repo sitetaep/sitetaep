@@ -7,10 +7,17 @@ export default function Layout({ title, children }) {
         <>
             <SEO title={title} />
             <div 
-            class="w-full h-full bg-no-repeat bg-cover sm:bg-cover bg-center sm:bg-bottom bg-fixed"
+            class="w-full h-full bg-no-repeat bg-cover sm:bg-cover bg-center sm:bg-bottom bg-fixed hidden md:block"
             style={{ 
             backgroundImage: `url(${background})`
             }}>
+                <div className='text-white'>
+                    <Navbar />
+                    <CTAButtons />
+                    <main>{children}</main>
+                </div>
+            </div>
+            <div class="w-full h-full bg-blue-1000 block md:hidden">
                 <div className='text-white'>
                     <Navbar />
                     <CTAButtons />
