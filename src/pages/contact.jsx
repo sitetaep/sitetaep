@@ -44,7 +44,7 @@ const ContactPage = () => (
                 <h1 className='text-4xl text-center font-bold text-blue-1000 mb-8'>
                     Parlez nous de votre projet
                 </h1>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeWbxjbnwMCEievSgnP3rosK6P-TlHxcvZb-EWN8eQBSbk_Mg/viewform?embedded=true" width="640" height="780" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeWbxjbnwMCEievSgnP3rosK6P-TlHxcvZb-EWN8eQBSbk_Mg/viewform?embedded=true" width="350" height="800" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
             </div>
 
             <div className='px-6 lg:p-0 w-full max-w-xl flex flex-row space-x-8 items-center'>
