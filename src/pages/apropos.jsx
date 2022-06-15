@@ -30,8 +30,7 @@ const HeroSection = () => (
     </section>
 )
 
-const EquipeSection = ({
-}) => {
+const EquipeSection = ({image}) => {
     
     return (
 
@@ -43,11 +42,12 @@ const EquipeSection = ({
             Le vice-président épaule le président dans l’ensemble de ces tâches et s’assure de la bonne gestion de l’équipe. Il est aussi responsable de la qualité. 
             </p>
             <div className='text-center'>
-            {/*<AdministrateurCard
+            <AdministrateurCard
                 link="https://www.linkedin.com/in/alexis-rusalem-a93618173/"
                 name="Alexis Rusalem"
                 role="Président"
-            />*/}
+                image={image}
+            />
             </div>
             <h2>Pôle Trésorerie</h2>
             <p>
@@ -84,12 +84,13 @@ const PartenaireWall = () => (
     </section>
 )
 
-const AproposPage = () => {
+const AproposPage = ({data}) => {
+    const image = data.administrateur.image
     return (
         <Layout>
             <HeroSection />
             <div className='bg-white w-full'>
-                <EquipeSection />
+                <EquipeSection image={image} />
                 <PartenaireWall />
             </div>
            
@@ -98,3 +99,17 @@ const AproposPage = () => {
 }
 
 export default AproposPage
+
+export const query = graphql`
+    query {
+        administrateur: contentfulAdministrateur(name: { eq: "Alexis Rusalem" }) {
+            image {
+                gatsbyImageData(
+                    width: 600
+                    placeholder: BLURRED
+                    formats: [AUTO, WEBP]
+                )
+            }
+        }
+    }
+`
