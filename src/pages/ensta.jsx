@@ -31,7 +31,8 @@ const HeroSection = () => (
 const DescriptionSection = () => (
     <section className='p-4 sm:p-12 text-left flex flex-col space-y-4 max-w-5xl mx-auto'>
         <br/>
-        <div className='w-full text-center'>
+        <a href="https://www.ensta-paris.fr/">
+        <div className='flex justify-center hover:shadow-2xl'>
             <StaticImage
                 src='../images/logo_ENSTA.png'
                 alt='ENSTA Paris'
@@ -39,6 +40,7 @@ const DescriptionSection = () => (
                 
             />
         </div>
+        </a>
         <br/>
         <br/>
         <p>Fondée en 1741 afin de former des ingénieurs-constructeurs de marine, l’école a depuis étendu ses champs de compétence et occupe aujourd’hui une place de premier plan dans le paysage français de l’enseignement supérieur et de la recherche.<br/><br/>

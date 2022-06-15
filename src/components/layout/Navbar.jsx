@@ -50,13 +50,15 @@ export default function Navbar() {
         <nav className='p-6 flex flex-col space-y-4 sm:flex-row sm:space-y-0 justify-between items-center'>
             <div>
                 <Link to='/'>
-                    <StaticImage
-                        height={60}
-                        src='../../images/logo.png'
-                        alt='TAEP'
-                        title='TAEP'
-                        placeholder='blurred'
-                    />
+                    <button class="hover:bg-blue-1000 p-3 rounded">
+                        <StaticImage
+                            height={60}
+                            src='../../images/logo.png'
+                            alt='TAEP'
+                            title='TAEP'
+                            placeholder='blurred'
+                        />
+                    </button>
                 </Link>
             </div>
             <ul className='sm:px-12 flex flex-row space-x-3 uppercase text-black font-bold'>

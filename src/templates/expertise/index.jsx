@@ -261,7 +261,7 @@ const Page = ({
             <section className='my-24 max-w-5xl mx-auto px-6'>
                 <div className='flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-8'>
                     <div className='max-w-md flex flex-col space-y-4'>
-                        <h2 className='mb-8'>Nos intervenants</h2>
+                        <h2 className='mb-8'>Pourquoi nous choisir?</h2>
                         <>
                             {descriptionConsultant ? (
                                 <div

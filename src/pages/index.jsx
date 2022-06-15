@@ -87,7 +87,7 @@ const HeroSection = () => (
             <br/>
         </div>
         <Link to='/contact'>
-            <button className='mt-8 px-8 py-4 rounded bg-yellow-300 text-blue-900'>
+            <button className='mt-8 px-8 py-4 rounded bg-yellow-300 hover:bg-yellow-500 text-blue-900'>
                 Présenter mon projet
             </button>
         </Link>
