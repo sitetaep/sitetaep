@@ -5,6 +5,12 @@ module.exports = {
     },
     plugins: [
         {
+            resolve: "gatsby-plugin-anchor-links",
+            options: {
+                offset: -100
+            }
+        },
+        {
             resolve: 'gatsby-source-contentful',
             options: {
                 accessToken: 'cuoNXR7SmfzefSFVGLegEv50CNvuznKJuWL4ZngmfB8',

@@ -1,8 +1,9 @@
 import * as React from 'react'
 import { Layout } from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql} from 'gatsby'
 import AdministrateurCard from './AdministrateurCard'
+import { Link } from 'gatsby'
 
 const HeroSection = () => (
     <section className='text-center flex flex-col sm:space-y-12 items-center px-4 py-12 sm:p-20 max-w-5xl mx-auto'>
@@ -17,16 +18,21 @@ const HeroSection = () => (
         <h1 className='text-white'>
             L’Excellence Académique de l’ENSTA Paris à votre service!
         </h1>
-        <br/>
-        <br/>
+        <div className='block sm:hidden'>
+            <br/>
+        </div>
         <p className='text-xl text-white'>
             Un réseau de +300 étudiants brillants et dynamiques pour vous
             accompagner dans tous vos projets en lien avec l'ingénierie.
         </p>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+        <div className='block sm:hidden'>
+            <br/>
+        </div>
+        <Link to='/contact'>
+            <button className='mt-8 px-8 py-4 rounded bg-yellow-300 hover:bg-yellow-500 text-blue-900'>
+                Présenter mon projet
+            </button>
+        </Link>
     </section>
 )
 
@@ -34,7 +40,7 @@ const EquipeSection = ({image}) => {
     
     return (
 
-        <section className='text-center flex flex-col space-y-12 items-center px-4 py-12 sm:p-20 max-w-5xl mx-auto'>
+        <section id="equipesection" className='text-center flex flex-col space-y-12 items-center px-4 py-12 sm:p-20 max-w-5xl mx-auto'>
             <h1>Notre Equipe</h1>
             <h2>Présidence</h2>
             <p>
@@ -84,10 +90,10 @@ const PartenaireWall = () => (
     </section>
 )
 
-const AproposPage = ({data}) => {
+const EquipePage = ({data}) => {
     const image = data.administrateur.image
     return (
-        <Layout>
+        <Layout  title="TAEP La Junior Entreprise de l'ENSTA Paris">
             <HeroSection />
             <div className='bg-white w-full'>
                 <EquipeSection image={image} />
@@ -98,7 +104,7 @@ const AproposPage = ({data}) => {
     )
 }
 
-export default AproposPage
+export default EquipePage
 
 export const query = graphql`
     query {

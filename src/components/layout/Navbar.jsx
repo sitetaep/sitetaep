@@ -11,7 +11,7 @@ const Dropdown = ({ options, title }) => {
                 className='select-none relative'
                 onMouseEnter={() => setVisible(true)}
             >
-                <button class="bg-gray-100 hover:bg-gray-300 font-bold py-2 sm:px-4 rounded">
+                <button class="bg-yellow-300 hover:bg-yellow-400 font-bold py-2 sm:px-4 px-2 rounded">
                 {title}
                 </button>
             </span>
@@ -37,6 +37,7 @@ const Dropdown = ({ options, title }) => {
     )
 }
 
+
 export default function Navbar() {
     const { pages } = useStaticQuery(graphql`
         query {
@@ -47,21 +48,8 @@ export default function Navbar() {
     `)
 
     return (
-        <nav className='p-6 flex flex-col space-y-4 sm:flex-row sm:space-y-0 justify-between items-center'>
-            <div>
-                <Link to='/'>
-                    <button class="hover:bg-blue-1000 p-3 rounded">
-                        <StaticImage
-                            height={60}
-                            src='../../images/logo.png'
-                            alt='TAEP'
-                            title='TAEP'
-                            placeholder='blurred'
-                        />
-                    </button>
-                </Link>
-            </div>
-            <ul className='sm:px-12 flex flex-row space-x-3 uppercase text-black font-bold'>
+        <nav className='flex flex-col space-y-4 sm:flex-row sm:space-y-0 justify-between items-center'>
+            <ul className='hidden sm:px-12 sm:flex sm:flex-row sm:space-x-12 uppercase text-black font-bold'> 
                 <li>
                     <Dropdown
                         title='Nos Spécialités'
@@ -72,19 +60,50 @@ export default function Navbar() {
                     />
                 </li>
                 <li>
-                    <Link to='/demo'><button class="bg-gray-100 hover:bg-gray-300 font-bold py-2 sm:px-4 rounded">Comment ça marche?</button></Link>
+                    <Link to='/demo#demosection'><button class="bg-yellow-300 hover:bg-yellow-400 font-bold py-2 sm:px-4 rounded">Comment ça marche?</button></Link>
+                </li>
+            </ul>
+
+            <div>
+                <Link to='/'>
+                    <button class="bg-gray-100 rounded hover:bg-gray-300 p-3">
+                        <StaticImage
+                            height={80}
+                            src='../../images/logo.png'
+                            alt='TAEP'
+                            title='TAEP'
+                            placeholder='blurred'
+                        />
+                    </button>
+                </Link>
+            </div>
+            
+            <ul className='sm:hidden flex flex-row space-x-5 uppercase text-black font-bold'> 
+                <li>
+                    <Dropdown
+                        title='Nos Spécialités'
+                        options={pages.distinct.map((name) => ({
+                            title: capitalize(name),
+                            link: `/${name.toLowerCase()}`
+                        }))}
+                    />
                 </li>
                 <li>
-                    <Link to='/ensta'><button class="bg-gray-100 hover:bg-gray-300 font-bold py-2 sm:px-4 rounded">ENSTA Paris</button></Link>
+                    <Link to='/demo#demosection'><button class="bg-yellow-300 hover:bg-yellow-400 font-bold py-2 sm:px-4 px-2 rounded">Comment ça marche?</button></Link>
+                </li>
+            </ul>
+            <ul className='sm:px-12 flex flex-row sm:space-x-12 space-x-5 uppercase text-black font-bold'>    
+                <li>
+                    <Link to='/ensta#enstasection'><button class="bg-yellow-300 hover:bg-yellow-400 font-bold py-2 sm:px-4 px-2 rounded">ENSTA Paris</button></Link>
                     </li>
                 <li>
-                    <Link to='/apropos'><button class="bg-gray-100 hover:bg-gray-300 font-bold py-2 sm:px-4 rounded">Notre Equipe</button></Link>
+                    <Link to='/equipe#equipesection'><button class="bg-yellow-300 hover:bg-yellow-400 font-bold py-2 sm:px-4 px-2 rounded">Notre Equipe</button></Link>
                 </li>
                 {/* <li>
                     <Link to='/ecosysteme'>Ecosystème</Link>
                 </li> */}
             </ul>
-        </nav>
+        </nav>        
     )
 }
 

@@ -32,35 +32,42 @@ const ContactPage = () => (
                 </p>
             </div>
 
-            <div className='mt-24'>
+            <div className='bg-white mt-24 text-center'>
                 <Link to='/'>
-                    <StaticImage src='../images/logo.png' alt='TAEP' />
+                    <StaticImage height={80} src='../images/logo.png' alt='TAEP' />
                 </Link>
             </div>
         </section>
 
         <section className='flex-1 py-12 lg:p-20 flex flex-col space-y-12 justify-between items-center overflow-y-auto'>
-            <div className='px-6 md:px-12'>
-                <h1 className='text-4xl text-center font-bold text-blue-1000 mb-8'>
-                    Parlez nous de votre projet
-                </h1>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeWbxjbnwMCEievSgnP3rosK6P-TlHxcvZb-EWN8eQBSbk_Mg/viewform?embedded=true" width="350" height="800" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
-            </div>
-
+            <section id="form">
+                <div className='px-6 md:px-12'>
+                    <h1 className='text-4xl text-center font-bold text-blue-1000 mb-8'>
+                        Parlez nous de votre projet
+                    </h1>
+                    <div className='block sm:hidden'>
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeWbxjbnwMCEievSgnP3rosK6P-TlHxcvZb-EWN8eQBSbk_Mg/viewform?embedded=true" width="350" height="800" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+                    </div>
+                    <div className='hidden sm:block'>
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeWbxjbnwMCEievSgnP3rosK6P-TlHxcvZb-EWN8eQBSbk_Mg/viewform?embedded=true" width="600" height="800" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+                    </div>
+                </div>
+            </section>
             <div className='px-6 lg:p-0 w-full max-w-xl flex flex-row space-x-8 items-center'>
                 <hr className='bg-gray-300 flex-1' />
                 <span className='uppercase text-gray-300'>ou</span>
                 <hr className='bg-gray-300 flex-1' />
             </div>
-
-            <div className='w-full max-w-5xl'>
-                <h1 className='text-4xl text-center font-bold text-blue-1000 mb-8'>
-                    Réservez un appel
-                </h1>
-                {/* Calendly inline widget begin */}
-                <InlineWidget url='https://calendly.com/taep' />
-                {/* Calendly inline widget end */}
-            </div>
+            <section id="appel">
+                <div className='w-full max-w-5xl'>
+                    <h1 className='text-4xl text-center font-bold text-blue-1000 mb-8'>
+                        Réservez un appel
+                    </h1>
+                    {/* Calendly inline widget begin */}
+                    <InlineWidget url='https://calendly.com/taep' />
+                    {/* Calendly inline widget end */}
+                </div>
+            </section>
         </section>
     </main>
 )

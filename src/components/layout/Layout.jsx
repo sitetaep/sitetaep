@@ -8,11 +8,13 @@ export default function Layout({ title, children }) {
             <SEO title={title} />
             <div 
             class="w-full h-full bg-no-repeat bg-cover sm:bg-cover bg-center sm:bg-bottom bg-fixed hidden md:block"
-            style={{ 
+            style={{
             backgroundImage: `url(${background})`
             }}>
                 <div className='text-white'>
-                    <Navbar />
+                    <div className='bg-gray-100'>
+                        <Navbar />
+                    </div>
                     <CTAButtons />
                     <main>{children}</main>
                 </div>

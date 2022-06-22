@@ -42,7 +42,7 @@ export default function CTAButtons() {
                     </svg>
                 }
                 text='Présenter mon projet'
-                onClick={() => navigate('/contact')}
+                onClick={() => navigate('/contact#form')}
             />
             <Button
                 svg={
@@ -62,7 +62,7 @@ export default function CTAButtons() {
                     </svg>
                 }
                 text='Parler avec un administrateur'
-                onClick={() => navigate('/contact')}
+                onClick={() => navigate('/contact#appel')}
             />
         </nav>
     )

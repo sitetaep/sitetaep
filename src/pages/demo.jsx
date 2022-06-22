@@ -38,7 +38,7 @@ const HeroSection = () => (
 
 
 const DemoSection = () => (
-    <section className='my-24 max-w-5xl mx-auto'>
+    <section id="demosection" className='my-24 max-w-5xl mx-auto'>
         <br/>
         <br/>
         <br/>

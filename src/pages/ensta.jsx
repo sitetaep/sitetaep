@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Layout } from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
+import { Link } from 'gatsby'
 
 const HeroSection = () => (
     <section className='text-center flex flex-col sm:space-y-12 items-center px-4 py-12 sm:p-20 max-w-5xl mx-auto'>
@@ -15,21 +16,26 @@ const HeroSection = () => (
         <h1 className='text-white'>
             L’Excellence Académique de l’ENSTA Paris à votre service!
         </h1>
-        <br/>
-        <br/>
+        <div className='block sm:hidden'>
+            <br/>
+        </div>
         <p className='text-xl text-white'>
             Un réseau de +300 étudiants brillants et dynamiques pour vous
             accompagner dans tous vos projets en lien avec l'ingénierie.
         </p>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+        <div className='block sm:hidden'>
+            <br/>
+        </div>
+        <Link to='/contact'>
+            <button className='mt-8 px-8 py-4 rounded bg-yellow-300 hover:bg-yellow-500 text-blue-900'>
+                Présenter mon projet
+            </button>
+        </Link>
     </section>
 )
 
 const DescriptionSection = () => (
-    <section className='p-4 sm:p-12 text-left flex flex-col space-y-4 max-w-5xl mx-auto'>
+    <section id="enstasection" className='p-4 sm:p-12 text-left flex flex-col space-y-4 max-w-5xl mx-auto'>
         <br/>
         <a href="https://www.ensta-paris.fr/">
         <div className='flex justify-center hover:shadow-2xl'>
@@ -68,7 +74,7 @@ const DescriptionSection = () => (
 
 const EnstaPage = () => {
     return (
-        <Layout>
+        <Layout title="TAEP La Junior Entreprise de l'ENSTA Paris">
             <HeroSection />
             <div className='bg-white w-full'>
                 <DescriptionSection />
