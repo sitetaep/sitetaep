@@ -77,7 +77,7 @@ const HeroSection = () => (
             <br/>
             <br/>
         </div>
-        <h1 className='text-white'>
+        <h1 className='text-white tracking-wide'>
             L’Excellence Académique d'ENSTA Paris à votre service!
         </h1>
         <div className='block sm:hidden'>
