@@ -48,25 +48,40 @@ export default function Navbar() {
     `)
 
     return (
-        <nav className='flex flex-col space-y-4 sm:flex-row sm:space-y-0 justify-between items-center'>
-            <ul className='hidden sm:px-12 sm:flex sm:flex-row sm:space-x-12 uppercase text-black font-bold'> 
-                <li>
-                    <Dropdown
-                        title='Nos Spécialités'
-                        options={pages.distinct.map((name) => ({
-                            title: capitalize(name),
-                            link: `/${name.toLowerCase()}`
-                        }))}
-                    />
-                </li>
-                <li>
-                    <Link to='/demo#demosection'><button class="bg-yellow-300 hover:bg-yellow-400 font-bold py-2 sm:px-4 rounded">Comment ça marche?</button></Link>
-                </li>
-            </ul>
-
-            <div>
+        <nav className='bg-gray-100 pb-5 sm:pb-0 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:grid-flow-col place-items-center pt-7 sm:pt-0'>
+            <div className='hidden sm:block'>
+                <ul className='pl-12 space-x-12 flex flex-row uppercase text-black font-bold'> 
+                    <li>
+                        <Dropdown
+                            title='Nos Spécialités'
+                            options={pages.distinct.map((name) => ({
+                                title: capitalize(name),
+                                link: `/${name.toLowerCase()}`
+                            }))}
+                        />
+                    </li>
+                    <li>
+                        <Link to='/demo#demosection'><button class="bg-yellow-300 hover:bg-yellow-400 font-bold py-2 sm:px-4 rounded">Comment ça marche?</button></Link>
+                    </li>
+                </ul>
+            </div>
+            <div className='block sm:hidden'>
                 <Link to='/'>
-                    <button class="bg-gray-100 rounded hover:bg-gray-300 p-3">
+                    <button class="bg-gray-100 sm:rounded hover:bg-gray-300 p-3">
+                        <StaticImage
+                            height={120}
+                            src='../../images/logo.png'
+                            alt='TAEP'
+                            title='TAEP'
+                            placeholder='blurred'
+                        />
+                    </button>
+                </Link>
+            </div>
+
+            <div className='hidden sm:block'>
+                <Link to='/'>
+                    <button class="bg-gray-100 sm:rounded hover:bg-gray-300 p-3">
                         <StaticImage
                             height={80}
                             src='../../images/logo.png'
@@ -78,31 +93,35 @@ export default function Navbar() {
                 </Link>
             </div>
             
-            <ul className='sm:hidden flex flex-row space-x-5 uppercase text-black font-bold'> 
-                <li>
-                    <Dropdown
-                        title='Nos Spécialités'
-                        options={pages.distinct.map((name) => ({
-                            title: capitalize(name),
-                            link: `/${name.toLowerCase()}`
-                        }))}
-                    />
-                </li>
-                <li>
-                    <Link to='/demo#demosection'><button class="bg-yellow-300 hover:bg-yellow-400 font-bold py-2 sm:px-4 px-2 rounded">Comment ça marche?</button></Link>
-                </li>
-            </ul>
-            <ul className='sm:px-12 flex flex-row sm:space-x-12 space-x-5 uppercase text-black font-bold'>    
-                <li>
-                    <Link to='/ensta#enstasection'><button class="bg-yellow-300 hover:bg-yellow-400 font-bold py-2 sm:px-4 px-2 rounded">ENSTA Paris</button></Link>
+            <div className='block sm:hidden'>
+                <ul className='grid grid-cols-1 gap-4 place-items-center uppercase text-black font-bold'> 
+                    <li>
+                        <Dropdown
+                            title='Nos Spécialités'
+                            options={pages.distinct.map((name) => ({
+                                title: capitalize(name),
+                                link: `/${name.toLowerCase()}`
+                            }))}
+                        />
                     </li>
-                <li>
-                    <Link to='/equipe#equipesection'><button class="bg-yellow-300 hover:bg-yellow-400 font-bold py-2 sm:px-4 px-2 rounded">Notre Equipe</button></Link>
-                </li>
-                {/* <li>
-                    <Link to='/ecosysteme'>Ecosystème</Link>
-                </li> */}
-            </ul>
+                    <li>
+                        <Link to='/demo#demosection'><button class="bg-yellow-300 hover:bg-yellow-400 font-bold py-2 sm:px-4 px-2 rounded">Comment ça marche?</button></Link>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul className='space-x-12 flex flex-row uppercase text-black font-bold'>    
+                    <li>
+                        <Link to='/ensta#enstasection'><button class="bg-yellow-300 hover:bg-yellow-400 font-bold py-2 sm:px-4 px-2 rounded">ENSTA Paris</button></Link>
+                        </li>
+                    <li>
+                        <Link to='/equipe#equipesection'><button class="bg-yellow-300 hover:bg-yellow-400 font-bold py-2 sm:px-4 px-2 rounded">Notre Equipe</button></Link>
+                    </li>
+                    {/* <li>
+                        <Link to='/ecosysteme'>Ecosystème</Link>
+                    </li> */}
+                </ul>
+            </div>
         </nav>        
     )
 }

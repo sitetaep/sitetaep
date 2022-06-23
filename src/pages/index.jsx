@@ -68,7 +68,7 @@ const AvantageSection = () => (
 )
 
 const HeroSection = () => (
-    <section className='text-center flex flex-col sm:space-y-12 items-center px-4 py-12 sm:p-20 max-w-5xl mx-auto'>
+    <section className='text-center flex flex-col sm:space-y-12 items-center px-4 sm:py-12 py-5 sm:p-20 max-w-5xl mx-auto'>
         <div className='hidden md:block'>
             <br/>
             <br/>
