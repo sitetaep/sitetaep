@@ -81,7 +81,7 @@ export default function Navbar() {
 
             <div className='hidden sm:block'>
                 <Link to='/'>
-                    <button class="bg-gray-100 sm:rounded hover:bg-gray-300 p-3">
+                    <button class="bg-gray-100 hover:bg-gray-300 p-3">
                         <StaticImage
                             height={80}
                             src='../../images/logo.png'

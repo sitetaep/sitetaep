@@ -77,13 +77,13 @@ const HeroSection = () => (
             <br/>
             <br/>
         </div>
-        <h1 className='text-white tracking-wide'>
-            L’Excellence Académique d'ENSTA Paris à votre service!
+        <h1 className='text-white tracking-wide text-shadow'>
+            L’Excellence Académique d'ENSTA Paris à votre service !
         </h1>
         <div className='block sm:hidden'>
             <br/>
         </div>
-        <p className='text-xl text-white'>
+        <p className='text-xl text-white text-shadow font-semibold'>
             Un réseau de +300 étudiants brillants et dynamiques pour vous
             accompagner dans tous vos projets en lien avec l'ingénierie.
         </p>

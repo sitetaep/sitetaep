@@ -4,6 +4,7 @@ module.exports = {
         title: 'TAEP'
     },
     plugins: [
+        'tailwindcss-textshadow',
         {
             resolve: "gatsby-plugin-anchor-links",
             options: {
