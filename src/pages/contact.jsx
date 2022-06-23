@@ -45,13 +45,41 @@ const ContactPage = () => (
                     <h1 className='text-4xl text-center font-bold text-blue-1000 mb-8'>
                         Parlez nous de votre projet
                     </h1>
-                    <div className='block sm:hidden'>
-                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeWbxjbnwMCEievSgnP3rosK6P-TlHxcvZb-EWN8eQBSbk_Mg/viewform?embedded=true" width="350" height="800" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
-                    </div>
-                    <div className='hidden sm:block'>
-                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeWbxjbnwMCEievSgnP3rosK6P-TlHxcvZb-EWN8eQBSbk_Mg/viewform?embedded=true" width="600" height="800" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
-                    </div>
+                    <form
+                        action="https://docs.google.com/forms/d/e/1FAIpQLSeWbxjbnwMCEievSgnP3rosK6P-TlHxcvZb-EWN8eQBSbk_Mg/formResponse"
+                        method='POST'
+                        className='flex flex-col space-y-4'
+                    >
+                        <input
+                            className='py-2 px-4 bg-gray-50 shadow-inner border-2 border-gray-50 hover:border-yellow-300'
+                            type='text'
+                            name="entry.1562379310"
+                            id='name'
+                            placeholder='Nom'
+                        />
+                        <input
+                            className='py-2 px-4 bg-gray-50 shadow-inner border-2 border-gray-50 hover:border-yellow-300'
+                            type='text'
+                            name="entry.675783753"
+                            id='email'
+                            placeholder='Email'
+                        />
+                        <textarea
+                            className='py-2 px-4 bg-gray-50 shadow-inner border-2 border-gray-50 hover:border-yellow-300'
+                            rows={4}
+                            name="entry.1584428018"
+                            placeholder='Décrivez votre projet'
+                        />
+                        <input
+                            className='bg-yellow-300 text-blue-900 px-8 py-2 cursor-pointer'
+                            type='submit'
+                            value='Envoyer'
+                        />
+                    </form>
                 </div>
+                <br/>
+                <br/>
+                <br/>
             </section>
             <div className='px-6 lg:p-0 w-full max-w-xl flex flex-row space-x-8 items-center'>
                 <hr className='bg-gray-300 flex-1' />
@@ -59,6 +87,9 @@ const ContactPage = () => (
                 <hr className='bg-gray-300 flex-1' />
             </div>
             <section id="appel">
+                <br/>
+                <br/>
+                <br/>
                 <div className='w-full max-w-5xl'>
                     <h1 className='text-4xl text-center font-bold text-blue-1000 mb-8'>
                         Réservez un appel

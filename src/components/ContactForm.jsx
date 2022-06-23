@@ -45,12 +45,37 @@ export default function ContactForm() {
 
             <div className='flex-1 text-black scale-50'>
                 <h2 className='text-4xl font-bold mb-8'>À votre tour</h2>
-                <div className='hidden sm:block'>
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeWbxjbnwMCEievSgnP3rosK6P-TlHxcvZb-EWN8eQBSbk_Mg/viewform?embedded=true" width="700" height="800" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
-                </div>
-                <div className='block sm:hidden'>
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeWbxjbnwMCEievSgnP3rosK6P-TlHxcvZb-EWN8eQBSbk_Mg/viewform?embedded=true" width="350" height="800" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
-                </div>
+                <form
+                    action="https://docs.google.com/forms/d/e/1FAIpQLSeWbxjbnwMCEievSgnP3rosK6P-TlHxcvZb-EWN8eQBSbk_Mg/formResponse"
+                    method='POST'
+                    className='flex flex-col space-y-4'
+                >
+                    <input
+                        className='py-2 px-4 bg-gray-50 shadow-inner border-2 border-gray-50 hover:border-yellow-300'
+                        type='text'
+                        name="entry.1562379310"
+                        id='name'
+                        placeholder='Nom'
+                    />
+                    <input
+                        className='py-2 px-4 bg-gray-50 shadow-inner border-2 border-gray-50 hover:border-yellow-300'
+                        type='text'
+                        name="entry.675783753"
+                        id='email'
+                        placeholder='Email'
+                    />
+                    <textarea
+                        className='py-2 px-4 bg-gray-50 shadow-inner border-2 border-gray-50 hover:border-yellow-300'
+                        rows={4}
+                        name="entry.1584428018"
+                        placeholder='Décrivez votre projet'
+                    />
+                    <input
+                        className='bg-yellow-300 text-blue-900 px-8 py-2 cursor-pointer'
+                        type='submit'
+                        value='Envoyer'
+                    />
+                </form>
             </div>
         </section>
     )
