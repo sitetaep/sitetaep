@@ -67,7 +67,7 @@ const Tooltip = ({ text, position }) => {
             className='hidden md:block absolute z-30 text-5xl text-center font-bold uppercase text-white'
             style={{
                 textShadow: '0px 0px 3px white',
-                left: `${(position && position.x + 20) || 0}px`,
+                left: `${(position && position.x - 150) || 0}px`,
                 top: `${(position && position.y + 20) || 0}px`
             }}
         >
