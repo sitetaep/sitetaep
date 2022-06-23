@@ -14,7 +14,7 @@ const HeroSection = () => (
             <br/>
         </div>
         <h1 className='text-white'>
-            L’Excellence Académique de l’ENSTA Paris à votre service!
+            L’Excellence Académique d’ENSTA Paris à votre service!
         </h1>
         <div className='block sm:hidden'>
             <br/>

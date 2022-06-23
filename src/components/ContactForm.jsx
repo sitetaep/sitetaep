@@ -3,8 +3,8 @@ import Linkedin from './Linkedin'
 
 export default function ContactForm() {
     return (
-        <section className='px-6 sm:p-0 flex flex-row sm:space-x-12 max-w-3xl mx-auto my-24'>
-            <div className='hidden sm:block bg-blue-1000 p-8 shadow-2xl text-white'>
+        <section className='px-6 sm:p-0 flex sm:flex-row flex-col space-y-10 sm:space-x-12 max-w-3xl mx-auto my-24'>
+            <div className=' bg-blue-1000 p-8 shadow-2xl text-white'>
                 <h3 className='text-3xl font-bold mb-4 text-yellow-300'>
                     Contactez nous
                 </h3>
@@ -45,7 +45,12 @@ export default function ContactForm() {
 
             <div className='flex-1 text-black scale-50'>
                 <h2 className='text-4xl font-bold mb-8'>À votre tour</h2>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeWbxjbnwMCEievSgnP3rosK6P-TlHxcvZb-EWN8eQBSbk_Mg/viewform?embedded=true" width="350" height="800" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+                <div className='hidden sm:block'>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeWbxjbnwMCEievSgnP3rosK6P-TlHxcvZb-EWN8eQBSbk_Mg/viewform?embedded=true" width="700" height="800" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+                </div>
+                <div className='block sm:hidden'>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeWbxjbnwMCEievSgnP3rosK6P-TlHxcvZb-EWN8eQBSbk_Mg/viewform?embedded=true" width="350" height="800" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+                </div>
             </div>
         </section>
     )
